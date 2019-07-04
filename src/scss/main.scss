@@ -1,0 +1,201 @@
+@import "variables";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    font-family: $open-sans-font;
+}
+
+body {
+    margin: 0;
+
+    .slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: $slider-height;
+        width: 100%;
+
+        .slider__inner {
+            max-width: $slider-inner-max-width;
+            width: 100%;
+            margin: auto;
+
+            .form-container {
+                max-width: $form-container-max-width;
+                height: $form-container-height;
+
+                @media screen and (max-width: 1285px) {
+                    padding: $form-container-1285-padding;
+                }
+
+                .form.background {
+                    background-color: $red-color;
+
+                    @media screen and (min-width: 1082px) {
+                        display: flex;
+                    }
+                }
+
+                .form {
+                    width: 100%;
+                    padding: $form-padding;
+                    box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.35);
+
+                    .form__titles {
+                        @media screen and (min-width: 1082px) {
+                            display: inline-block;
+                            min-width: $form__titles-1082-min-width;
+                            padding-right: $form__titles-1082-padding-right;
+                        }
+
+                        .form__title {
+                            text-transform: uppercase;
+                            font-weight: $font-weight-bold;
+                            font-size: $title-font-size;
+                            color: white;
+
+                            @media screen and (max-width: 340px) {
+                                width: 100%;
+                            }
+                        }
+
+                        .form__subtitle {
+                            font-size: $subtitile-font-size;
+                            color: $very-light-grey-color;
+
+                            @media screen and (max-width: 416px) {
+                                width: $form__subtitle-416-width;
+                            }
+
+                            @media screen and (max-width: 340px) {
+                                width: 100%;
+                            }
+                        }
+
+                        .max__text {
+                            @media screen and (min-width: 1082px) {
+                                display: none;
+                            }
+                        }
+
+                        .min__text {
+                            display: none;
+
+                            @media screen and (min-width: 1082px) {
+                                display: flex;
+                            }
+                        }
+                    }
+
+                    .controls {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: $controls-margin-top;
+
+                        @media screen and (min-width: 1082px) {
+                            margin-top: $controls-1082-margin-top;
+                        }
+
+                        @media screen and (max-width: 764px) {
+                            flex-wrap: wrap;
+                        }
+
+                        .control {
+                            position: relative;
+                            flex: $control-flex;
+                            cursor: pointer;
+                            margin-right: $control-margin-right;
+                            border-radius: $control-border-radius;
+                            background-color: white;
+
+                            .control__input {
+                                border: none;
+                                width: 100%;
+                                background: transparent;
+                                pointer-events: none;
+                                font-family: $verdana-font;
+                                font-size: $control__input-font-size;
+                                height: $control__input-height;
+                                font-weight: $font-weight-bold;
+                                padding: $control__input-padding;
+                                color: $red-color;
+                            }
+
+                            .control__label {
+                                position: absolute;
+                                font-family: $verdana-font;
+                                font-size: $control__label-font-size;
+                                top: $control__label-top;
+                                left: $control__label-left;
+                                color: $light-grey-color;
+                            }
+
+                            .control__icon {
+                                position: absolute;
+                                width: $control__icon-width;
+                                height: $control__icon-height;
+                                top: $control__icon-top;
+                                right: $control__icon-right;
+                                transform: $control__icon-transform;
+                                opacity: $control__icon-opacity;
+                            }
+
+                            .calendar__icon {
+                                background-image: url(../icons/calendar.svg);
+                            }
+
+                            .mirrored__calendar__icon {
+                                background-image: url(../icons/calendar.svg);
+                                transform: translateY(-50%) scale(-1, 1);
+                            }
+
+                            .person__icon {
+                                background-image: url(../icons/person.svg);
+                            }
+
+                            .control__button {
+                                outline: none;
+                                cursor: pointer;
+                                width: 100%;
+                                height: 100%;
+                                text-transform: uppercase;
+                                font-size: $control__button-font-size;
+                                font-weight: $font-weight-bold;
+                                font-family: $open-sans-font;
+                                color: $dark-red-color;
+                                background-color: $light-red-color;
+                                border: $control__button-border;
+                                border-radius: $control__button-border-radius;
+                                box-shadow: 0 0.1666666667rem 0.5rem 0 rgba(0, 0, 0, 0.15),
+                                    0 -3px 0 0 rgba(0, 0, 0, 0.1) inset;
+                            }
+
+                            .control__button:hover {
+                                background-color: white;
+                            }
+                        }
+
+                        .control:hover .control__icon {
+                            opacity: 1;
+                        }
+
+                        @import "adaptive_control";
+                    }
+                }
+            }
+        }
+    }
+
+    .slider.background {
+        background-image: url(../img/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @import "calendar";
+}

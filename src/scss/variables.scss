@@ -1,0 +1,121 @@
+$red-color: #f33122;
+$light-red-color: rgba(243,66,53,.1);
+$dark-red-color: #cf2a1d;
+$grey-color: #f5f5f5;
+$light-grey-color: #575757;
+$very-light-grey-color: rgba(255, 255, 255, 0.8);
+$black-color: #3d3d3d;
+
+$open-sans-font: "Open Sans", sans-serif;
+$verdana-font: Verdana, Arial, sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$title-font-size: 21px;
+$subtitile-font-size: 12px;
+
+$slider-height: 400px;
+$slider-inner-max-width: 1200px;
+
+$form-container-max-width: 1200px;
+$form-container-height: 376px;
+$form-container-1285-padding: 0 15px;
+
+$form-padding: 24px 30px;
+$form__titles-1082-min-width: 310px;
+$form__titles-1082-padding-right: 15px;
+
+$form__subtitle-416-width: 230px;
+
+$controls-margin-top: 18px;
+$controls-1082-margin-top: 0;
+
+$control-flex: 1 1 33%;
+$control-margin-right: 24px;
+$control-border-radius: 3px;
+
+$control-last-child-margin-right: 0;
+$control-last-child-1082-padding-right: 0 50px 0 0;
+$control-last-child-764-margin-top: 18px;
+$control-last-child-560-445-width: 47.5%;
+$control-last-child-444-405-margin-right: 0;
+
+$control__in__out-1082-min-width: 168px;
+$control__in__out-764-561-margin-right: 18px;
+$control__in__out-404-margin-right: 0;
+
+$control__in-560-445-margin-right: 18px;
+$control__in-444-405-margin: 0;
+
+$control__out-560-445-margin-right: 0;
+$control__out-444-margin-top: 18px;
+$control__out-404-flex: 0 0 100%;
+$control__out-444-margin-top: 18px;
+
+$control__visitors-flex: 0 0 99px;
+$control__visitors--764-561-margin-right: 0;
+$control__visitors-560-445-margin: 18px 18px 0 auto;
+$control__visitors-444-margin-right: 0;
+$control__visitors-444-405-margin-top: 18px;
+$control__visitors-404-max-width: 158px;
+$control__visitors-404-margin-top: 18px;
+$control__visitors-404-flex: 0 0 51%;
+$control__visitors-404-min-width: 99px;
+$control__visitors-404-margin-right: 53px;
+
+$control__find-button-1082-min-width: 150px;
+$control__find-button-800-min-width: 168px;
+$control__find-button-560-445-max-width: 226px;
+
+$control__button-764-padding: 9px 0;
+
+$control__input-padding: 15px 27px 5px 12px;
+$control__input-height: 42px;
+$control__input-font-size: 13.5px;
+
+$control__label-font-size: 12px;
+$control__label-top: 0;
+$control__label-left: 12px;
+
+$control__icon-width: 24px;
+$control__icon-height: 24px;
+$control__icon-top: 50%;
+$control__icon-right: 6px;
+$control__icon-transform: translateY(-50%);
+$control__icon-opacity: 0.73;
+
+$control__button-font-size: 16px;
+$control__button-border: 0 solid;
+$control__button-border-radius: 3px;
+
+$calendar__head-font-size: 18px;
+$calendar__head-padding: 16px;
+$calendar__head-padding-left: 20px;
+
+$prev__next__month-width: 36px;
+
+$month-font: 16px Arial, sans-serif;
+$month-font-size: 18px;
+$month-line-height: 40px;
+$month-opacity: 0.8;
+
+$weekdays__table-font-size: 14px;
+$weekdays__table-line-height: 37px;
+$weekdays__table-padding: 0 16px;
+$weekdays__table-opacity: 0.8;
+
+$weekday-font-size: 14px;
+$weekday-width: 40px;
+$weekday-line-height: 37px;
+$weekday-opacity: 0.8;
+
+$days__table-padding: 0 16px 16px 16px;
+
+$day-width: 40px;
+$day-height: 40px;
+$day-line-height: 40px;
+$day-padding: 0;
+
+$day__element--disabled-opacity: 0.4;
+$day__element--selected-opacity: 1;

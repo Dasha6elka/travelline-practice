@@ -1,0 +1,90 @@
+@import "variables";
+
+.control:last-child {
+    margin-right: $control-last-child-margin-right;
+
+    @media screen and (min-width: 1082px) {
+        padding-right: $control-last-child-1082-padding-right;
+    }
+
+    @media screen and (max-width: 764px) {
+        margin-top: $control-last-child-764-margin-top;
+    }
+
+    @media screen and (max-width: 560px) and (min-width: 445px) {
+        width: $control-last-child-560-445-width;
+        flex: none;
+    }
+}
+
+.control__in,
+.control__out {
+    @media screen and (max-width: 1082px) {
+        min-width: $control__in__out-1082-min-width;
+    }
+
+    @media screen and (max-width: 764px) and (min-width: 561px) {
+        margin-right: $control__in__out-764-561-margin-right;
+    }
+
+    @media screen and (max-width: 444px) {
+        margin-right: $control__in__out-404-margin-right;
+    }
+}
+
+.control__in {
+    @media screen and (max-width: 560px) and (min-width: 445px) {
+        margin-right: $control__in-560-445-margin-right;
+    }
+}
+
+.control__out {
+    @media screen and (max-width: 560px) and (min-width: 445px) {
+        margin-right: $control__out-560-445-margin-right;
+    }
+
+    @media screen and (max-width: 444px) {
+        flex: $control__out-404-flex;
+        margin-top: $control__out-444-margin-top;
+    }
+}
+
+.control__visitors {
+    flex: $control__visitors-flex;
+
+    @media screen and (max-width: 764px) and (min-width: 561px) {
+        margin-right: $control__visitors--764-561-margin-right;
+    }
+
+    @media screen and (max-width: 560px) and (min-width: 445px) {
+        margin: $control__visitors-560-445-margin;
+    }
+
+    @media screen and (max-width: 444px) {
+        max-width: $control__visitors-404-max-width;
+        margin-top: $control__visitors-404-margin-top;
+        flex: $control__visitors-404-flex;
+        min-width: $control__visitors-404-min-width;
+        margin-right: $control__visitors-404-margin-right;
+    }
+}
+
+.control__find-button {
+    @media screen and (min-width: 1082px) {
+        min-width: $control__find-button-1082-min-width;
+    }
+
+    @media screen and (max-width: 800px) {
+        min-width: $control__find-button-800-min-width;
+    }
+
+    @media screen and (max-width: 560px) and (min-width: 445px) {
+        max-width: $control__find-button-560-445-max-width;
+    }
+
+    .control__button {
+        @media screen and (max-width: 764px) {
+            padding: $control__button-764-padding;
+        }
+    }
+}

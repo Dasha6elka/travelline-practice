@@ -1,0 +1,141 @@
+@import "variables";
+
+.calendar {
+    display: inline-block;
+    opacity: 1;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.24);
+    background-color: white;
+    transition: opacity 0.2s ease-in-out;
+
+    &__head {
+        font-size: $calendar__head-font-size;
+        font-weight: $font-weight-bold;
+        padding: $calendar__head-padding;
+        padding-left: $calendar__head-padding-left;
+        border-bottom: 1px solid rgba(61, 61, 61, 0.24);
+    }
+
+    &--hidden {
+        opacity: 0;
+    }
+
+    &__inner {
+        display: flex;
+    }
+}
+
+.weekdays__table {
+    text-align: center;
+    font-size: $weekdays__table-font-size;
+    width: 100%;
+    line-height: $weekdays__table-line-height;
+    padding: $weekdays__table-padding;
+    opacity: $weekdays__table-opacity;
+    background-color: $grey-color;
+    border-bottom: 1px solid rgba(61, 61, 61, 0.24);
+}
+
+.weekday {
+    text-align: center;
+    font-size: $weekday-font-size;
+    width: $weekday-width;
+    line-height: $weekday-line-height;
+    opacity: $weekday-opacity;
+}
+
+.days__table {
+    padding: 0 16px 16px 16px;
+
+    &__element {
+        border-collapse: collapse;
+    }
+}
+
+.day {
+    color: $black-color;
+    text-align: center;
+    width: $day-width;
+    height: $day-height;
+    line-height: $day-line-height;
+    padding: $day-padding;
+}
+
+.day__element {
+    display: block;
+    text-decoration: none;
+    color: $black-color;
+
+    &--active {
+        background-color: $light-red-color;
+        color: $black-color;
+    }
+
+    &--disabled,
+    &--disabled-permanently {
+        opacity: $day__element--disabled-opacity;
+        pointer-events: none;
+    }
+
+    &--selected,
+    &:hover {
+        background-color: $red-color;
+        color: white;
+        opacity: $day__element--selected-opacity;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    &--first-selected {
+        background-color: rgba(243, 66, 53, 0.83);
+        color: white;
+        opacity: 1;
+    }
+}
+
+.month__element {
+    border-bottom: 1px solid rgba(61, 61, 61, 0.24);
+}
+
+.month__element__arrow {
+    user-select: none;
+    color: rgba(243, 66, 53, 0.73);
+    padding: 0 3px;
+    width: 36px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    vertical-align: baseline;
+
+    a {
+        display: block;
+        width: 36px;
+    }
+
+    &:hover {
+        background-color: $red-color;
+        color: white;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+    &--disabled {
+        opacity: 0.24;
+        pointer-events: none;
+    }
+}
+
+table {
+    width: 100%;
+}
+
+.prev__next__month {
+    width: 36px;
+}
+
+.month {
+    font: $month-font;
+    color: $black-color;
+    text-align: center;
+    font-size: $month-font-size;
+    line-height: $month-line-height;
+    opacity: $month-opacity;
+}
