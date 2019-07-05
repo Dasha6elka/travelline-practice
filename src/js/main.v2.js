@@ -120,6 +120,7 @@ $(document).ready(() => {
         state.arrival = state.arrival;
         $(".day__element:not(empty)").removeClass("day__element--disabled");
         $(".day__element:not(empty)").removeClass("day__element--first-selected");
+        $(`.day__element:not(:empty):eq(${state.today.getDate() - 1})`).removeClass("day__element--disabled-permanently");
     });
 
     // показ правого календаря по клику на поле календаря
@@ -175,12 +176,6 @@ $(document).ready(() => {
         }
         setActiveArrivalDate(state.months.left);
         setActiveArrivalDate(state.months.right);
-        // if (state.arrival.getMonth() === state.months.right && state.today.getFullYear() === state.year) {
-        //     state.arrival = state.arrival;
-        // }
-        // if (state.arrival.getMonth() === state.months.left && state.today.getFullYear() === state.year) {
-        //     state.arrival = state.arrival;
-        // }
     });
 
     // обработка стрелки календаря вперёд
@@ -218,12 +213,6 @@ $(document).ready(() => {
         }
         setActiveArrivalDate(state.months.left);
         setActiveArrivalDate(state.months.right);
-        // if (state.arrival.getMonth() === state.months.left && state.today.getFullYear() === state.year) {
-        //     state.arrival = state.arrival;
-        // }
-        // if (state.arrival.getMonth() === state.months.right && state.today.getFullYear() === state.year) {
-        //     state.arrival = state.arrival;
-        // }
     });
 
     // заполнение левой стороны календаря
@@ -359,15 +348,17 @@ function disableDatesBeforeArrival() {
     if (state.arrival.getMonth() < state.months.left || state.arrival.getFullYear() < state.year) {
         return;
     }
-    const monthOffset = getMonthOffset(state.arrival);
-    const monthOffsetD = getMonthOffset(state.departure);
+    const arrivalMonthOffset = getMonthOffset(state.arrival);
+    const departureMonthOffset = getMonthOffset(state.departure);
     if (state.control == Control.OUT) {
         $(`.day__element:not(:empty):lt(${state.today.getDate()})`).addClass("day__element--disabled-permanently");
-        $(`.day__element:not(:empty):lt(${state.departure.getDate() + monthOffsetD})`).addClass("day__element--active");
-        $(`.day__element:not(:empty):lt(${state.arrival.getDate() + monthOffset})`)
+        $(`.day__element:not(:empty):lt(${state.departure.getDate() + departureMonthOffset})`).addClass("day__element--active");
+        $(`.day__element:not(:empty):lt(${state.arrival.getDate() + arrivalMonthOffset})`)
             .addClass("day__element--disabled")
             .removeClass("day__element--active");
-        $(`.day__element:not(:empty):eq(${state.arrival.getDate() - 1 + monthOffset})`).addClass("day__element--first-selected");
+        $(`.day__element:not(:empty):eq(${state.arrival.getDate() - 1 + arrivalMonthOffset})`).addClass("day__element--first-selected");
+    } else {
+        $(`.day__element:not(:empty):eq(${state.arrival.getDate() - 1 + arrivalMonthOffset})`).addClass("day__element--active");
     }
 }
 
